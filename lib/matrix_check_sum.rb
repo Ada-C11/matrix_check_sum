@@ -13,11 +13,6 @@ def matrix_check_sum(matrix)
     j = 0
     while j < matrix[i].length
       row_sum += matrix[i][j]
-      j += 1
-    end
-
-    j = 0
-    while j < matrix.length
       column_sum += matrix[j][i]
       j += 1
     end
