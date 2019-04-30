@@ -1,6 +1,7 @@
-require 'minitest/autorun'
-require 'minitest/reporters'
-require_relative '../lib/matrix_check_sum'
+require "minitest/autorun"
+require "minitest/reporters"
+require "minitest/pride"
+require_relative "../lib/matrix_check_sum"
 
 describe "matrix check sum" do
   describe "basic tests" do
