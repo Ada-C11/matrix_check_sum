@@ -3,8 +3,16 @@
 # of numbers in row i is the same as the sum of numbers in column i for i = 0 to row.length-1
 # If this is the case, return true. Otherwise, return false.
 
-# Time complexity: ?
-# Space complexity: ?
+# Time complexity: O(n) where n is the width of the matrix in the matrix, it would be O(n+2n) which redices to O(n)
+# Space complexity: O(1) constant number of fixed sized variables are used regardless of the size of the martix
 def matrix_check_sum(matrix)
-  raise NotImplementedError
+  rows = matrix.length
+  rows.times do |index|
+    row_sum = 0
+    col_sum = 0
+    rows.times { |row| row_sum += matrix[row][index] }
+    rows.times { |column| col_sum += matrix[index][column] }
+    return false if row_sum != col_sum
+  end
+  return true
 end
