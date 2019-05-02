@@ -4,7 +4,7 @@
 # If this is the case, return true. Otherwise, return false.
 
 # Time complexity: O(n^2) where n is the length of matrix
-# Space complexity: O(n) where n is the length of matrix
+# Space complexity: If a matrix is rows*columns large, than space complexity will be O(rows) or O(columns), depending on which is larger.
 def matrix_check_sum(matrix)
   rows = matrix.length
   columns = matrix[0].length
