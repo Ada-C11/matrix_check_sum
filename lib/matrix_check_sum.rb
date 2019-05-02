@@ -8,7 +8,7 @@ def matrix_check_sum(matrix)
   sum_check = false
   i = 0
   columns.times do
-    row_sum = matrix[i].inject(0) { |sum, x| sum + x }
+    row_sum = matrix[i].sum
     j = 0
     rows.times do
       col_sum += matrix[j][i]
