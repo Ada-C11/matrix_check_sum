@@ -3,8 +3,33 @@
 # of numbers in row i is the same as the sum of numbers in column i for i = 0 to row.length-1
 # If this is the case, return true. Otherwise, return false.
 
-# Time complexity: ?
-# Space complexity: ?
+# Time complexity: O(n^2) where n is the length of matrix
+# Space complexity: If a matrix is rows*columns large, than space complexity will be O(rows) or O(columns), depending on which is larger.
 def matrix_check_sum(matrix)
-  raise NotImplementedError
+  rows = matrix.length
+  columns = matrix[0].length
+  
+  sum_rows = []
+  matrix.each do |row|
+    sum_rows.push(row.sum)
+  end
+
+  sum_columns = []
+  columns.times do |i|
+    sum = 0
+    rows.times do |j|
+      sum = sum + matrix[j][i]
+    end
+    sum_columns.push(sum)
+  end
+ 
+  rows.times do |i|
+    columns.times do |j|
+      if sum_rows[i] != sum_columns[j]
+        return false
+      end
+    end
+  end
+
+  return true
 end
