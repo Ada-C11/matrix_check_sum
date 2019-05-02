@@ -3,7 +3,7 @@
 # of numbers in row i is the same as the sum of numbers in column i for i = 0 to row.length-1
 # If this is the case, return true. Otherwise, return false.
 
-# Time complexity: O(m * n), where m is the number of rows in the matrix and n is the number of columns
+# Time complexity: O(n^2), where n is the number of rows in the matrix
 # Space complexity: O(1)
 def matrix_check_sum(matrix)
   elements = matrix.length
