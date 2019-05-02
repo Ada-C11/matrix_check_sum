@@ -30,7 +30,7 @@ describe "matrix check sum" do
 
     it "3 X 3 matrix check sum false" do
       # setup
-      matrix = [[1, 2, 3],
+      matrix = [[1, 2, 3], 
                 [4, 5, 6],
                 [10, 11, 12]]
 
