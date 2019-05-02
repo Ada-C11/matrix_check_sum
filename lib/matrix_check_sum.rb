@@ -12,5 +12,3 @@ def matrix_check_sum(matrix)
   end
 return true
 end
-
-matrix_check_sum(matrix)
