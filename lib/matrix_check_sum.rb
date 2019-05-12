@@ -13,8 +13,7 @@ def matrix_check_sum(matrix)
       col_sum += matrix[j][i]
       j += 1
     end
-    if col_sum == row_sum
-    else
+    if col_sum != row_sum
       return false
     end
     col_sum = 0
